@@ -6,7 +6,7 @@
 [https://github.com/allwefantasy/mammuthus-yarn-client](https://github.com/allwefantasy/mammuthus-yarn-client)   使得构建Yarn程序更加容易
 [https://github.com/allwefantasy/mammuthus-dynamic-deploy](https://github.com/allwefantasy/mammuthus-dynamic-deploy) 基于mammuthus-yarn-client，可以调度Java/Docker 容器的系统
 [https://github.com/allwefantasy/DCS](https://github.com/allwefantasy/DCS) 一个示例Java Web程序，可以被mammuthus-dynamic-deploy 调度
-
+[https://github.com/allwefantasy/mammuthus-nginx](https://github.com/allwefantasy/mammuthus-nginx) Nginx 伴生对象。可以通过Rest API操作Nginx. 可以和mammuthus-dynamic-deploy 对接，从而实现后端服务变更后通知Nginx负载均衡集群
 
 ## 运行这个项目
 
