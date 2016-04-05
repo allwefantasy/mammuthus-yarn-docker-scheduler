@@ -3,21 +3,25 @@
 
 ## 关联项目
 
-[https://github.com/allwefantasy/mammuthus-yarn-client](https://github.com/allwefantasy/mammuthus-yarn-client)   使得构建Yarn程序更加容易
-[https://github.com/allwefantasy/mammuthus-dynamic-deploy](https://github.com/allwefantasy/mammuthus-dynamic-deploy) 基于mammuthus-yarn-client，可以调度Java/Docker 容器的系统
-[https://github.com/allwefantasy/DCS](https://github.com/allwefantasy/DCS) 一个示例Java Web程序，可以被mammuthus-dynamic-deploy 调度
-[https://github.com/allwefantasy/mammuthus-nginx](https://github.com/allwefantasy/mammuthus-nginx) Nginx 伴生对象。可以通过Rest API操作Nginx. 可以和mammuthus-dynamic-deploy 对接，从而实现后端服务变更后通知Nginx负载均衡集群
+
+* [https://github.com/allwefantasy/mammuthus-yarn-client](https://github.com/allwefantasy/mammuthus-yarn-client)   使得构建Yarn程序更加容易
+
+* [https://github.com/allwefantasy/mammuthus-dynamic-deploy](https://github.com/allwefantasy/mammuthus-dynamic-deploy) 基于mammuthus-yarn-client，可以调度Java/Docker 容器的系统
+
+* [https://github.com/allwefantasy/DCS](https://github.com/allwefantasy/DCS) 一个示例Java Web程序，可以被mammuthus-dynamic-deploy 调度
+
+* [https://github.com/allwefantasy/mammuthus-nginx](https://github.com/allwefantasy/mammuthus-nginx) Nginx 伴生对象。可以通过Rest API操作Nginx. 可以和mammuthus-dynamic-deploy 对接，从而实现后端服务变更后通知Nginx负载均衡集群
 
 ## 运行这个项目
 
 上面所有的项目都基于 [https://github.com/allwefantasy/ServiceFramework](https://github.com/allwefantasy/ServiceFramework) 构建。你需要能够编译和打包该项目。正常情况下这个项目只要
 
-```
+```shell
 mvn -DskipTests  install 
 ```
 到你本地。或者
 
-```
+```shell
 mvn -DskipTests  deploy 
 ```
 到你的私仓。
@@ -35,14 +39,14 @@ ServiceFramework 项目主页会告诉你依赖的一个子项目。按照相同
 
 你需要将Hadoop相关配置文件放到 mammuthus-yarn-client 的resources目录(没有的话自己创建该目录)之后使用
 
-```
+```shell
 mvn package
 ```
 获得一个完整的包
 
 对于mammuthus-dynamic-deploy 项目，也是通过
 
-```
+```shell
 mvn package
 ```
 获得一个完整的包
@@ -60,7 +64,7 @@ mvn package
 ## 启动测试
 
 
-```
+```shell
 java -cp /Users/allwefantasy/CSDNWorkSpace/mammuthus-yarn-client/target/mammuthus-yarn-client-1.0-SNAPSHOT-SHADED.jar mammuthus.yarn.Client \
 --jar /Users/allwefantasy/CSDNWorkSpace/mammuthus-dynamic-deploy/target/mammuthus-dynamic-deploy-1.0-SNAPSHOT-jar-with-dependencies.jar \ 
 --driver-memory 256m \
